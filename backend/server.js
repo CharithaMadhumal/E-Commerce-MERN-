@@ -3,6 +3,7 @@ import cors from 'cors';
 import connectDB from './config/db.js';
 import 'dotenv/config'
 import userRouter from './routes/userRoutes.js';
+import productRouter from './routes/productRoutes.js';
 
 
 const app = express();
@@ -23,6 +24,7 @@ app.get('/', (req,res) => {
 // Routes Setup
 
 app.use('/api/auth',userRouter);
+app.use('/api/product',productRouter);
 
 
 
