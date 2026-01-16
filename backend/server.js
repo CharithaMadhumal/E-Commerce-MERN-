@@ -4,6 +4,7 @@ import connectDB from './config/db.js';
 import 'dotenv/config'
 import userRouter from './routes/userRoutes.js';
 import productRouter from './routes/productRoutes.js';
+import paymentRouter from './routes/paymentRoutes.js';
 
 
 const app = express();
@@ -25,6 +26,7 @@ app.get('/', (req,res) => {
 
 app.use('/api/auth',userRouter);
 app.use('/api/product',productRouter);
+app.use('/api/payment', paymentRouter);
 
 
 
