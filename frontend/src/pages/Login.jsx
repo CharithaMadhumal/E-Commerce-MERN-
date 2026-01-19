@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { loginUser } from '../Api'; // API Import
 
 const Login = () => {
+    
     const navigate = useNavigate();
     const [formData, setFormData] = useState({ email: '', password: '' });
 
@@ -18,10 +19,10 @@ const Login = () => {
 
             // Save Token and Role to LocalStorage
             localStorage.setItem('token', data.token);
-            localStorage.setItem('role', data.user.role);
+            localStorage.setItem('role', data.userData.role);
 
             // Redirect based on Role
-            if (data.user.role === 'admin') {
+            if (data.userData.role === 'admin') {
                 navigate('/admin');
             } else {
                 navigate('/shop');

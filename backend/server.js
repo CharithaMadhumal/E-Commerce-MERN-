@@ -25,8 +25,8 @@ app.get('/', (req,res) => {
 // Routes Setup
 
 app.use('/api/auth',userRouter);
-app.use('/api/product',productRouter);
-app.use('/api/payment', paymentRouter);
+app.use('/api/products',productRouter);
+app.use('/api/payments', paymentRouter);
 
 
 

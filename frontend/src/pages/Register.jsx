@@ -21,7 +21,7 @@ const Register = () => {
         e.preventDefault();
         try {
             // API Calling
-            const { data } = await registerUser(formData);
+            const {data } = await registerUser(formData);
 
             alert('Registration Successful! Please Login.');
             navigate('/login');

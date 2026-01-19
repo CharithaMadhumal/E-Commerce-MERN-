@@ -18,3 +18,5 @@ export const registerUser = (formData) => API.post('/auth/register', formData);
 export const fetchProducts = (category) => API.get(`/products${category ? `?category=${category}` : ''}`);
 export const createProduct = (newProduct) => API.post('/products', newProduct);
 export const processPayment = (orderData) => API.post('/payments/checkout', orderData);
+export const updateProduct = (id, updatedProduct) => API.put(`/products/${id}`, updatedProduct);
+export const deleteProduct = (id) => API.delete(`/products/${id}`);
